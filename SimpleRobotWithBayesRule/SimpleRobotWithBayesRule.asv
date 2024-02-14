@@ -255,7 +255,7 @@ set(figure(1) ,'KeyPressFcn',@keyhandler,'Name','Bayesian Update');
         %  with 0.2 probability, and moves 90deg to the right of the command with
         %  probability .1 and to the left with prob. 0.1.
         rVal = rand(); %number between 0 and 1
-        if rVal< (1-probStraight - 2*profOffby90Deg); % 0.2 chance for not moving
+        if rVal< (1-probStraight - 2*profOffby90Deg);
             move = [0,0];
         elseif rVal < (1-probStraight - profOffby90Deg)
             move = [-move(2),move(1)]; %move +90deg of command
